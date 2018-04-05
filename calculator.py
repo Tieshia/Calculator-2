@@ -7,9 +7,11 @@ calculator program yourself in this file.
 from arithmetic import *
 
 def calculate():
-    
+
+
     """ A prefix-notation calculator"""
 
+    print "Please enter the math operation and corresponding values: "
     # repeat forever:
     while True:
         # get input
@@ -19,7 +21,11 @@ def calculate():
         action = tokens[0]
         inputs = tokens[1:]
         for i in range(len(inputs)):
-            inputs[i] = float(inputs[i])
+            if inputs[i].isdigit():
+                inputs[i] = float(inputs[i])
+            else: 
+                print "Please enter a valid math expression."
+
 
         # if the first token is "q":
         if action == 'q':
@@ -67,6 +73,8 @@ def calculate():
                 # if cubes+ then add_cubes()
                 if action == 'cubes+':
                     print add_cubes(inputs)
+            else:
+                print "Please enter a valid math operator."
 
 
 calculate()
