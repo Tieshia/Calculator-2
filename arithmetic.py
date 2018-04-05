@@ -1,62 +1,62 @@
 """Math functions for calculator."""
 
 
-def add(num1, num2):
+def add(lst):
     """Return the sum of the two inputs."""
 
-    return num1 + num2
+    return lst[0] + lst[1]
 
 
-def subtract(num1, num2):
+def subtract(lst):
     """Return the second number subtracted from the first."""
 
-    return num1 - num2
+    return lst[0] - lst[1]
 
 
-def multiply(num1, num2):
+def multiply(lst):
     """Multiply the two inputs together."""
 
-    return num1 * num2
+    return lst[0] * lst[1]
 
 
-def divide(num1, num2):
+def divide(lst):
     """Divide the first input by the second and return the result."""
 
-    return num1 / num2
+    return lst[0] / lst[1]
 
 
-def square(num1):
+def square(lst):
     """Return the square of the input."""
 
-    return num1 ** 2
+    return lst[0] ** 2
 
 
-def cube(num1):
+def cube(lst):
     """Return the cube of the input."""
 
-    return num1 ** 3
+    return lst[0] ** 3
 
 
-def power(num1, num2):
-    """Raise num1 to the power of num2 and return the value."""
+def power(lst):
+    """Raise lst to the power o and return the value."""
 
-    return num1 ** num2
-
-
-def mod(num1, num2):
-    """Return the remainder of num1 / num2."""
-
-    return num1 % num2
+    return lst[0] ** lst[1]
 
 
-def add_mult(num1, num2, num3):
-    """Returns sum of num1 and num2, multiplied by num3"""
+def mod(lst):
+    """Return the remainder of lst ."""
 
-    return add(num1, num2) * num3
+    return lst[0] % lst[1]
 
 
-def add_cubes(num1, num2):
-    """Cubes num1 and num2 and returns the sum"""
+def add_mult(lst):
+    """Returns sum of lst an, multiplied by num3"""
 
-    return cube(num1) + cube(num2)
+    return add(lst) * lst[2]
+
+
+def add_cubes(lst):
+    """Cubes lst an and returns the sum"""
+
+    return (lst[0] ** 3) + (lst[1] ** 3)
     
